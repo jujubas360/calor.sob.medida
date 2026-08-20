@@ -1,22 +1,27 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquecimento Sustentável da Piscina - CEP</title>
+    <title>Aquecimento Sustentável & Física - CEP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Elementos Decorativos Aero (Bolhas Flutuantes) -->
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+
     <!-- Barreira de Acessibilidade -->
     <div class="accessibility-bar">
-        <button id="toggle-contrast" aria-label="Alternar Alto Contraste">Acessibilidade: Alto Contraste</button>
+        <button id="toggle-contrast" aria-label="Alternar Alto Contraste">♿ Alto Contraste</button>
     </div>
 
     <!-- Cabeçalho Frutiger Aero -->
-    <header class="aero-card">
+    <header class="aero-card header-card">
         <div class="logo-container">
-            <div class="aero-bubble"></div>
+            <div class="aero-prism-icon">🌈</div>
             <h1>Aquecimento Sustentável - Piscina CEP</h1>
         </div>
         <p class="subtitle">Turma 2°M | Colégio Estadual do Paraná</p>
@@ -26,31 +31,34 @@
         
         <!-- Equipe -->
         <section class="aero-card">
-            <h2>Integrantes do Grupo</h2>
+            <h2>✨ Integrantes do Grupo</h2>
             <ul class="team-list">
-                <li onclick="openModal('Camilly C. - n° 3', 'Responsável pela área de Organização.')">Camilly C. n° 3</li>
+                <li onclick="openModal('Camilly C. - n° 5', 'Responsável pela área de Programação.')">Camilly C. n° 5</li>
                 <li onclick="openModal('Gloria R. - n° 9', 'Responsável pela área de Robótica.')">Gloria R. n° 9</li>
                 <li onclick="openModal('Jiayu - n° 10', 'Responsável pela área de Física e Tecnociência.')">Jiayu n° 10</li>
-                <li onclick="openModal('Julia E. - n° 12', 'Responsável pela área de Programação.')">Julia E. n° 12</li>
+                <li onclick="openModal('Julia E. - n° 12', 'Responsável pela área de Língua e Organização.')">Julia E. n° 12</li>
             </ul>
             <p class="interactive-hint">💡 Clique no nome de um integrante para ver sua função!</p>
         </section>
 
-        <!-- Física e Óptica -->
-        <section class="aero-card">
-            <h2>Física e Óptica: Refração e Efeito Estufa</h2>
+        <!-- Física, Refração e Dispersão Luminosa -->
+        <section class="aero-card highlight-card">
+            <h2>🌈 Física e Óptica: Refração e Dispersão Luminosa</h2>
             <p>
-                Os raios solares passam pela cobertura transparente (vidro ou acrílico) do coletor solar através da <strong>refração da luz</strong>. Ao atingir a placa interna escura, a radiação luminosa é absorvida e convertida em radiação infravermelha (calor).
+                A <strong>refração</strong> ocorre quando a luz solar muda de meio (passando do ar para o acrílico/vidro do coletor solar ou para as gotas de água), alterando sua velocidade e se desviando.
             </p>
             <p>
-                Como a cobertura transparente bloqueia a saída dos raios infravermelhos de onda longa, cria-se o <strong>efeito estufa</strong> dentro do coletor. O calor retido aquece a água que circula pelas tubulações do painel.
+                Esse fenômeno dá origem à <strong>dispersão luminosa</strong>: a luz branca do Sol é composta por várias cores (frequências). Ao refratar através de um meio denso — como um <em>prisma de vidro</em> ou <em>gotículas de água no ar</em> —, cada cor sofre um desvio em ângulo diferente. A luz vermelha desvia menos e a violeta desvia mais, decompondo a luz no espectro visível que forma o <strong>arco-íris</strong>.
             </p>
-            <button class="aero-btn" onclick="openModal('Detalhes Físicos', 'A refração ocorre quando a luz muda de meio (ar para vidro/acrílico), alterando sua velocidade e direção, garantindo máxima captação de energia luminosa!')">Saber mais sobre Refração</button>
+            <p>
+                <strong>No Coletor Solar:</strong> A refração garante a entrada dos raios solares no painel. O calor fica preso internamente devido ao <em>efeito estufa</em>, aquecendo a água da piscina com alta eficiência.
+            </p>
+            <button class="aero-btn rainbow-btn" onclick="openModal('Dispersão & Prisma', 'Assim como um prisma ou as gotas da chuva decompõem a luz solar para criar o arco-íris, o acrílico do painel solar desvia e aproveita a luz para gerar energia térmica máxima!')">Saber mais sobre Prismaticos</button>
         </section>
 
         <!-- Automação e Robótica -->
         <section class="aero-card">
-            <h2>Automação e Robótica</h2>
+            <h2>🤖 Automação e Robótica</h2>
             <p>
                 O controle da circulação de água é automatizado por um microcontrolador <strong>Arduino</strong> integrado a sensores e atuadores:
             </p>
@@ -59,12 +67,12 @@
                 <li><strong>Arduino:</strong> Processa os dados do sensor e toma decisões lógicas em tempo real.</li>
                 <li><strong>Módulo Relé / Bomba:</strong> O relé funciona como um interruptor eletrônico acionado pelo Arduino para ligar ou desligar a bomba de circulação solar.</li>
             </ul>
-            <button class="aero-btn" onclick="openModal('Circuito Robótico', 'O Arduino lê a temperatura da água e, ao detectar necessidade de aquecimento, envia um sinal digital de 5V para o Módulo Relé, fecho o circuito da bomba de alta tensão com segurança.')">Ver Logica do Circuito</button>
+            <button class="aero-btn" onclick="openModal('Circuito Robótico', 'O Arduino lê a temperatura da água e, ao detectar necessidade de aquecimento, envia um sinal digital de 5V para o Módulo Relé, fechando o circuito da bomba de alta tensão com segurança.')">Ver Lógica do Circuito</button>
         </section>
 
         <!-- Simulador Interativo -->
         <section class="aero-card simulator-card">
-            <h2>Simulador Interativo do Sistema</h2>
+            <h2>⚙️ Simulador Interativo do Sistema</h2>
             <div class="simulator-box">
                 <label for="temp-input">Digite a temperatura atual da piscina (°C):</label>
                 <input type="number" id="temp-input" placeholder="Ex: 24" min="0" max="50">
@@ -85,7 +93,7 @@
     </div>
 
     <footer>
-        <p>Projeto de Aquecimento Sustentável - Colégio Estadual do Paraná (CEP)</p>
+        <p>💧 Projeto de Aquecimento Sustentável - Colégio Estadual do Paraná (CEP) 🌿</p>
     </footer>
 
     <script src="script.js"></script>
