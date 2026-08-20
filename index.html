@@ -1,314 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AQUECIMENTO CEP // SISTEMA SUSTENTÁVEL</title>
-  <style>
-    /* ESTILO BRUTALISMO WEB & ACID GRAPHIC */
-    :root {
-      --bg: #121212;
-      --card-bg: #000000;
-      --text: #ffffff;
-      --acid-lime: #ccff00;
-      --acid-pink: #ff007f;
-      --acid-cyan: #00f0ff;
-      --acid-orange: #ff5500;
-      --border: 4px solid #ccff00;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Courier New', Courier, monospace, sans-serif;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.4;
-      padding: 15px;
-    }
-
-    header {
-      border: var(--border);
-      background: var(--acid-lime);
-      color: #000;
-      padding: 20px;
-      margin-bottom: 25px;
-      box-shadow: 8px 8px 0px var(--acid-pink);
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: -1px;
-      word-break: break-word;
-    }
-
-    .badge-turma {
-      background: #000;
-      color: var(--acid-lime);
-      display: inline-block;
-      padding: 4px 8px;
-      margin-top: 10px;
-      font-weight: bold;
-      border: 2px solid #000;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 25px;
-    }
-
-    @media (min-width: 768px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .full-width {
-        grid-column: span 2;
-      }
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 3px solid var(--text);
-      padding: 20px;
-      box-shadow: 6px 6px 0px var(--acid-cyan);
-      position: relative;
-    }
-
-    .card-pink {
-      box-shadow: 6px 6px 0px var(--acid-pink);
-      border-color: var(--acid-pink);
-    }
-
-    .card-lime {
-      box-shadow: 6px 6px 0px var(--acid-lime);
-      border-color: var(--acid-lime);
-    }
-
-    .card-orange {
-      box-shadow: 6px 6px 0px var(--acid-orange);
-      border-color: var(--acid-orange);
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      background: var(--text);
-      color: #000;
-      padding: 5px 10px;
-      margin-bottom: 15px;
-      display: inline-block;
-    }
-
-    .card-pink h2 { background: var(--acid-pink); color: #fff; }
-    .card-lime h2 { background: var(--acid-lime); color: #000; }
-    .card-orange h2 { background: var(--acid-orange); color: #000; }
-
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    p {
-      margin-bottom: 12px;
-      font-size: 1rem;
-    }
-
-    /* SIMULADOR */
-    .sim-controls {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    label {
-      font-weight: bold;
-      text-transform: uppercase;
-      color: var(--acid-lime);
-    }
-
-    input[type="number"] {
-      width: 100%;
-      padding: 12px;
-      background: #1a1a1a;
-      border: 3px solid var(--acid-lime);
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    button {
-      padding: 15px;
-      background: var(--acid-lime);
-      color: #000;
-      border: 3px solid #fff;
-      font-size: 1.1rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      cursor: pointer;
-      box-shadow: 4px 4px 0px var(--acid-pink);
-      transition: transform 0.1s;
-    }
-
-    button:active {
-      transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0px var(--acid-pink);
-    }
-
-    .display-status {
-      margin-top: 20px;
-      padding: 15px;
-      border: 3px dashed var(--text);
-      background: #111;
-      text-align: center;
-    }
-
-    .status-text {
-      font-size: 1.3rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .status-active {
-      color: var(--acid-lime);
-      border-color: var(--acid-lime);
-    }
-
-    .status-off {
-      color: var(--acid-pink);
-      border-color: var(--acid-pink);
-    }
-
-    .status-warning {
-      color: var(--acid-orange);
-      border-color: var(--acid-orange);
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 15px;
-      border-top: var(--border);
-      text-align: center;
-      font-size: 0.9rem;
-      background: #000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquecimento Sustentável da Piscina - CEP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>AQUECIMENTO SUSTENTÁVEL // PISCINA CEP</h1>
-    <div class="badge-turma">TURMA: 2°M — COLÉGIO ESTADUAL DO PARANÁ[cite: 1]</div>
-  </header>
+    <!-- Barreira de Acessibilidade -->
+    <div class="accessibility-bar">
+        <button id="toggle-contrast" aria-label="Alternar Alto Contraste">Acessibilidade: Alto Contraste</button>
+    </div>
 
-  <main class="grid">
-    
-    <!-- INTEGRANTES -->
-    <section class="card card-lime">
-      <h2>// INTEGRANTES DO GRUPO</h2>
-      <ul>
-        <li>Camilly C. — N° 05[cite: 1]</li>
-        <li>Gloria R. — N° 09[cite: 1]</li>
-        <li>Jiayu — N° 10[cite: 1]</li>
-        <li>Julia E. — N° 12[cite: 1]</li>
-      </ul>
-    </section>
-
-    <!-- FÍSICA E ÓPTICA -->
-    <section class="card card-pink">
-      <h2>// FÍSICA E ÓPTICA: REFRAÇÃO & EFEITO ESTUFA</h2>
-      <p>
-        <strong>Refração da Luz:</strong> Os raios solares passam através da cobertura transparente (vidro/acrílico) do coletor solar. Ao mudarem do meio ar para o meio sólido transparente, a luz sofre refração e atinge a superfície interna absorvedora.
-      </p>
-      <p>
-        <strong>Retenção de Calor (Efeito Estufa):</strong> A radiação solar (luz visível) entra no coletor e é absorvida pelas superfícies escuras, convertendo-se em radiação infravermelha (calor). A cobertura transparente bloqueia a saída direta dessa radiação de onda longa, "aprisionando" o calor dentro da placa para aquecer a água que circula nas tubulações.
-      </p>
-    </section>
-
-    <!-- AUTOMAÇÃO E ROBÓTICA -->
-    <section class="card card-orange">
-      <h2>// AUTOMAÇÃO E ROBÓTICA: SISTEMA ARDUINO</h2>
-      <p>
-        O sistema de circulação da água é controlado por um circuito automatizado programado em C/C++[cite: 1]:
-      </p>
-      <ul>
-        <li><strong>Arduino (Microcontrolador):</strong> Processa os dados recebidos em tempo real[cite: 1].</li>
-        <li><strong>Sensor de Temperatura:</strong> Lê constantemente a temperatura da água da piscina[cite: 1].</li>
-        <li><strong>Módulo Relé & Bomba Solar:</strong> O relé funciona como uma chave eletrônica[cite: 1]. Quando acionado pelo Arduino, envia energia para ligar a bomba d'água[cite: 1], circulando a água pela placa aquecida.</li>
-      </ul>
-    </section>
-
-    <!-- SIMULADOR INTERATIVO -->
-    <section class="card full-width">
-      <h2>// SIMULADOR INTERATIVO DE CONTROLE</h2>
-      <p>Insira a temperatura atual da água para simular a resposta do sistema automatizado:</p>
-      
-      <div class="sim-controls">
-        <div>
-          <label for="tempInput">Temperatura da Água (°C):</label>
-          <input type="number" id="tempInput" placeholder="Ex: 24.5" step="0.1">
+    <!-- Cabeçalho Frutiger Aero -->
+    <header class="aero-card">
+        <div class="logo-container">
+            <div class="aero-bubble"></div>
+            <h1>Aquecimento Sustentável - Piscina CEP</h1>
         </div>
-        <button onclick="verificarStatus()">VERIFICAR STATUS DO SISTEMA</button>
-      </div>
+        <p class="subtitle">Turma 2°M | Colégio Estadual do Paraná</p>
+    </header>
 
-      <div class="display-status" id="displayStatus">
-        <span class="status-text">// AGUARDANDO LEITURA...</span>
-      </div>
-    </section>
+    <main class="container">
+        
+        <!-- Equipe -->
+        <section class="aero-card">
+            <h2>Integrantes do Grupo</h2>
+            <ul class="team-list">
+                <li onclick="openModal('Camilly C. - n° 5', 'Responsável pela área de Programação.')">Camilly C. n° 5</li>
+                <li onclick="openModal('Gloria R. - n° 9', 'Responsável pela área de Robótica.')">Gloria R. n° 9</li>
+                <li onclick="openModal('Jiayu - n° 10', 'Responsável pela área de Física e Tecnociência.')">Jiayu n° 10</li>
+                <li onclick="openModal('Julia E. - n° 12', 'Responsável pela área de Língua e Organização.')">Julia E. n° 12</li>
+            </ul>
+            <p class="interactive-hint">💡 Clique no nome de um integrante para ver sua função!</p>
+        </section>
 
-  </main>
+        <!-- Física e Óptica -->
+        <section class="aero-card">
+            <h2>Física e Óptica: Refração e Efeito Estufa</h2>
+            <p>
+                Os raios solares passam pela cobertura transparente (vidro ou acrílico) do coletor solar através da <strong>refração da luz</strong>. Ao atingir a placa interna escura, a radiação luminosa é absorvida e convertida em radiação infravermelha (calor).
+            </p>
+            <p>
+                Como a cobertura transparente bloqueia a saída dos raios infravermelhos de onda longa, cria-se o <strong>efeito estufa</strong> dentro do coletor. O calor retido aquece a água que circula pelas tubulações do painel.
+            </p>
+            <button class="aero-btn" onclick="openModal('Detalhes Físicos', 'A refração ocorre quando a luz muda de meio (ar para vidro/acrílico), alterando sua velocidade e direção, garantindo máxima captação de energia luminosa!')">Saber mais sobre Refração</button>
+        </section>
 
-  <footer>
-    PROJETO INTEGRADO: ROBÓTICA, FÍSICA E PROGRAMAÇÃO // CEP 2026[cite: 1]
-  </footer>
+        <!-- Automação e Robótica -->
+        <section class="aero-card">
+            <h2>Automação e Robótica</h2>
+            <p>
+                O controle da circulação de água é automatizado por um microcontrolador <strong>Arduino</strong> integrado a sensores e atuadores:
+            </p>
+            <ul>
+                <li><strong>Sensor de Temperatura:</strong> Monitora constantemente a água da piscina.</li>
+                <li><strong>Arduino:</strong> Processa os dados do sensor e toma decisões lógicas em tempo real.</li>
+                <li><strong>Módulo Relé / Bomba:</strong> O relé funciona como um interruptor eletrônico acionado pelo Arduino para ligar ou desligar a bomba de circulação solar.</li>
+            </ul>
+            <button class="aero-btn" onclick="openModal('Circuito Robótico', 'O Arduino lê a temperatura da água e, ao detectar necessidade de aquecimento, envia um sinal digital de 5V para o Módulo Relé, fecho o circuito da bomba de alta tensão com segurança.')">Ver Logica do Circuito</button>
+        </section>
 
-  <script>
-    function verificarStatus() {
-      const input = document.getElementById('tempInput').value;
-      const display = document.getElementById('displayStatus');
-      
-      if (input === "") {
-        display.innerHTML = '<span class="status-text status-warning">ERR: DIGITE UMA TEMPERATURA VÁLIDA!</span>';
-        return;
-      }
+        <!-- Simulador Interativo -->
+        <section class="aero-card simulator-card">
+            <h2>Simulador Interativo do Sistema</h2>
+            <div class="simulator-box">
+                <label for="temp-input">Digite a temperatura atual da piscina (°C):</label>
+                <input type="number" id="temp-input" placeholder="Ex: 24" min="0" max="50">
+                <button class="aero-btn action-btn" onclick="runSimulation()">Verificar Status da Bomba</button>
+            </div>
+            <div id="sim-result" class="result-box" aria-live="polite">Aguardando medição...</div>
+        </section>
 
-      const temp = parseFloat(input);
+    </main>
 
-      if (temp < 26) {
-        display.innerHTML = `
-          <span class="status-text status-active">
-            STATUS: BOMBA SOLAR LIGADA [ON]<br>
-            TEMPERATURA ABAIXO DO IDEAL (${temp}°C). AQUICENDO ÁGUA...
-          </span>
-        `;
-      } else if (temp >= 26 && temp <= 30) {
-        display.innerHTML = `
-          <span class="status-text status-off">
-            STATUS: BOMBA SOLAR DESLIGADA [OFF]<br>
-            TEMPERATURA IDEAL ALCANÇADA (${temp}°C). SISTEMA EM ESPERA.
-          </span>
-        `;
-      } else {
-        display.innerHTML = `
-          <span class="status-text status-warning">
-            STATUS: ALERTA DE ALTA TEMPERATURA [OFF]<br>
-            TEMPERATURA ACIMA DE 30°C (${temp}°C). SISTEMA DESLIGADO POR SEGURANÇA.
-          </span>
-        `;
-      }
-    }
-  </script>
+    <!-- Modal Pop-up -->
+    <div id="modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content aero-card">
+            <span class="close-btn" onclick="closeModalDirect()">&times;</span>
+            <h3 id="modal-title">Título</h3>
+            <p id="modal-text">Conteúdo do modal...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Projeto de Aquecimento Sustentável - Colégio Estadual do Paraná (CEP)</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
